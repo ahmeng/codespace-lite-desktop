@@ -1,0 +1,19 @@
+{
+  "name": "Codespace Lite Desktop",
+  "build": {
+    "dockerfile": "Dockerfile",
+    "context": ".."
+  },
+  "remoteUser": "vscode",
+  "forwardPorts": [2222, 3389],
+  "workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}",
+  "postCreateCommand": "bash .devcontainer/scripts/add_ssh_key.sh || true; echo 'Devcontainer ready.'",
+  "postStartCommand": "bash .devcontainer/scripts/ensure_services.sh || true",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-vscode-remote.remote-containers"
+      ]
+    }
+  }
+}

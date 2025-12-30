@@ -1,0 +1,6 @@
+# Example authorized_keys file (do NOT commit your private key).
+# Add one public key per line, e.g.:
+# ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAI... user@example.com
+
+# Put your public key(s) below this line:
+ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIexamplekeyhere user@example.com
