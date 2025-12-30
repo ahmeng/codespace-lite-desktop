@@ -19,7 +19,7 @@ RUN mkdir -p /var/run/sshd
 
 # Configure SSH to listen on 2222
 RUN sed -i 's/^#Port 22/Port 2222/' /etc/ssh/sshd_config || echo 'Port 2222' >> /etc/ssh/sshd_config
-RUN sed -i 's/^#PermitRootLogin prohibit-password/PermitRootLogin no/' /etc/ssh/sshd_config || true
+RUN sed -i 's/^#PermitRootLogin prohibit-password/PermitRootLogin yes/' /etc/ssh/sshd_config || true
 RUN sed -i 's/^#PasswordAuthentication yes/PasswordAuthentication yes/' /etc/ssh/sshd_config || true
 
 # Configure xrdp to use xfce
